@@ -1,0 +1,28 @@
+#設定値に「+」とあるがこれはメールボックス(mbox)のパスを表す。
+#メールボックスのパスはfolder変数によって指定される。（例: +mbox = ~/Mail/mbox） 
+#メールボックスのタイプ
+set mbox_type=Maildir
+#スプールメールボックスのファイルを指定
+set mbox="+mbox"
+set spoolfile="~/Maildir"
+#スプールメールボックスのファイルを指定
+set mbox="+mbox"
+#送信前メールなどを保存しておくメールボックスを指定
+set folder="~/Maildir"
+#送信を延期したメールを保存するファイルを指定
+set postponed="+postponed"
+#送信したメールを保存するファイルを指定
+set record="+outbox"
+#メッセージの表示や編集のためにつくる一時ファイルを置くディレクトリを指定
+set tmpdir="+tmp"
+
+#色付け
+color normal green default
+color hdrdefault cyan default
+color header yellow default ^(From|Subject):
+color quoted cyan default
+color signature red default
+color attachment blue default
+color body magenta default "(ftp|http)://[^ ]+" # point out URLs
+color body magenta default [-a-z_0-9.]+@[-a-z_0-9.]+ # e-mail addresses
+color search black yellow # how to hilite search patterns in the pager
